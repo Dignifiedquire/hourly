@@ -4,15 +4,17 @@
 
 ```bash
 $ npm i
-$ npm i -g grunt-cli
+$ npm i -g gulp
 $ grunt download-atom-shell
 ```
+and install [flow](flowtype.org).
 
 
 ## Run
 
 ```bash
-$ grunt && ./vendors/atom-shell/Atom.app/Contents/MacOS/Atom .
+$ gulp
+$ ./vendors/atom-shell/Atom.app/Contents/MacOS/Atom .
 ```
 
 ## Used Libraries

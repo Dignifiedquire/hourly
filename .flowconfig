@@ -2,7 +2,5 @@
 [ignore]
 .*/node_modules/flow-bin
 .*/node_modules/grunt*
-.*/build/.*
-
-[libs]
-.*/lib/.*
+.*/node_modules/gulp*
+.*/dist/.*
