@@ -12,7 +12,7 @@ $ grunt download-atom-shell
 ## Run
 
 ```bash
-$ grunt && ./atom-shell/Atom.app/Contents/MacOS/Atom .
+$ grunt && ./vendors/atom-shell/Atom.app/Contents/MacOS/Atom .
 ```
 
 ## Used Libraries

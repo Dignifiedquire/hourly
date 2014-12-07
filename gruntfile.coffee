@@ -11,7 +11,7 @@ module.exports = (grunt) ->
 
     'download-atom-shell':
       version: '0.19.5'
-      outputDir: './atom-shell'
+      outputDir: './vendors/atom-shell'
       rebuild: yes
 
     browserify:

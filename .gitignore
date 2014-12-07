@@ -1,4 +1,4 @@
 node_modules
 dist
-atom-shell
+vendors/atom-shell
 .tern-port
