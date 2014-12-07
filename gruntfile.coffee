@@ -21,12 +21,35 @@ module.exports = (grunt) ->
         files:
           'dist/app.js': ['lib/app.js']
 
+    less:
+      all:
+        options:
+          paths: [
+            'node_modules/bootstrap/less'
+            'node_modules/font-awesome/less'
+          ]
+        files:
+          'dist/app.css': 'styles/app.less'
+
+
+    flow:
+      options:
+        style: 'color'
+      files: {}
+
     watch:
       js:
         options:
           livereload: yes
         files: 'lib/**/*.js'
-        tasks: ['browserify']
+        tasks: ['flow', 'browserify']
+      css:
+        options:
+          livereload: yes
+        files: 'styles/**/*.less'
+        tasks: ['less']
 
 
-  grunt.registerTask 'default', ['browserify', 'watch']
+  grunt.registerTask 'build', ['flow', 'browserify', 'less']
+
+  grunt.registerTask 'default', ['build', 'watch']

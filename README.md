@@ -22,6 +22,10 @@ $ grunt && ./atom-shell/Atom.app/Contents/MacOS/Atom .
 * grunt
 * browserify
 * pouchdb
+* flow
+* bootstrap3
+* font-awesome
+* less
 
 ## Planned Libraries
 
