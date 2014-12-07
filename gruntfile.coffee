@@ -21,5 +21,12 @@ module.exports = (grunt) ->
         files:
           'dist/app.js': ['lib/app.js']
 
+    watch:
+      js:
+        options:
+          livereload: yes
+        files: 'lib/**/*.js'
+        tasks: ['browserify']
 
-  grunt.registerTask 'default', ['browserify']
+
+  grunt.registerTask 'default', ['browserify', 'watch']

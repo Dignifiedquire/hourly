@@ -1,3 +1,4 @@
 node_modules
 dist
 atom-shell
+.tern-port
