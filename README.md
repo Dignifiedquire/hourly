@@ -21,12 +21,11 @@ $ ./vendors/atom-shell/Atom.app/Contents/MacOS/Atom .
 
 * atom-shell
 * 6to5
-* grunt
+* gulp
 * browserify
 * pouchdb
 * flow
-* bootstrap3
-* font-awesome
+* material-ui
 * less
 
 ## Planned Libraries

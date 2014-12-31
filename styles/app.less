@@ -1,6 +1,11 @@
-@import 'bootstrap';
-@import 'font-awesome';
+/* material-ui */
+@import 'node_modules/material-ui/src/less/scaffolding.less';
 
-@fa-font-path: '../node_modules/font-awesome/fonts';
+//Define a custom less file to override any variables defined in scaffolding.less
+@import 'custom-overrides.less';
 
-@import './layout';
+@import 'node_modules/material-ui/src/less/components.less';
+
+
+@import 'layout';
+@import 'fonts';
