@@ -15,6 +15,7 @@ reactifyStrip = (file) -> reactify file, stripTypes: yes
 gulp.task 'browserify', ->
   bundler = browserify
     entries: ['./lib/app.js'] # Only need initial file, browserify finds the deps
+    extensions: ['.jsx']
     transform: [reactifyStrip, to5] # We want to convert JSX to normal javascript
     debug: yes # Gives us sourcemapping
     cache: {}
@@ -29,12 +30,12 @@ gulp.task 'browserify', ->
     shell.task('flow')()
     .on 'data', ->
       updateStart = Date.now()
-      console.log('Updating!')
+      console.log 'Updating!'
       watcher.bundle() # Create new bundle that uses the cache for high performance
-      .pipe(source('app.js'))
+      .pipe source 'app.js'
       # This is where you add uglifying etc.
-      .pipe(gulp.dest('./dist/'))
-      console.log('Updated!', (Date.now() - updateStart) + 'ms')
+      .pipe gulp.dest './dist/'
+      console.log 'Updated!', (Date.now() - updateStart) + 'ms'
     .on 'error', (error) ->
       #console.log(error)
   .bundle() # Create the initial bundle when starting the task
